@@ -30,6 +30,9 @@
         </select>
     <input type="submit" id="submit-search" />
     </form>
+	
+	
+	
   <table>
       <thead>
           <tr>
@@ -45,7 +48,7 @@
       </thead>
       <tbody>
           <tr>
-              <td>AL</td>
+              <td id= "state">AL</td>
               <td>01</td>
               <td>00190</td>
               <td>Alabaster City School District</td>
@@ -56,11 +59,26 @@
           </tr>
       </tbody>
   </table>
+  
+  
     
 </body>
+
+<body>
+  <p id= "output"></p>
+</body> 
+
     <script>
         function myFunction() {
             window.alert("Fill in this code please!");
         }
     </script>
+	
+	<script>
+      window.onload= function(){
+	   let state= "MD";
+	   document.getElementById("state").innerHTML=state;
+	 };
+    </script>
+  
 </html>
