@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+thead {
+    background-color: blue;
+    color: white;
+    height: auto;
+}
+
+thead a {
+    color: white;
+    text-decoration: none;
+}
+
+thead a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+tbody {
+    text-align: center;
+    background-color: #C7D9FB
+}
+
+tbody tr:hover {
+    background-color: lightcoral;
+}
