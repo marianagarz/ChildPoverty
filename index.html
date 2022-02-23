@@ -13,6 +13,8 @@
         <p> <em> Brought to you by the US Census Bureau </em></p>
     </div>
     
+	<button type="button" onclick="nextPage()">next ten!</button>
+	
     <form id="search" onSubmit="myFunction()">
         <lable for="search-column">In Column:</lable>
         <select name="column" id="search-column">
@@ -48,7 +50,97 @@
       </thead>
       <tbody>
           <tr>
-              <td id= "state">AL</td>
+              <td id='state'>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td >AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
+              <td>01</td>
+              <td>00190</td>
+              <td>Alabaster City School District</td>
+              <td>35,268</td>
+              <td>6,797</td>
+              <td>669</td>
+              <td>9.84%</td>
+          </tr>
+		  <tr>
+              <td>AL</td>
               <td>01</td>
               <td>00190</td>
               <td>Alabaster City School District</td>
@@ -75,12 +167,15 @@
 </body> 
 
     <script>
+		let pointer=0;
         function myFunction() {
             window.alert("Fill in this code please!");
         }
-    </script>
-	
-	<script>
+		
+		function nextPage(){
+			pointer= pointer+10;
+			window.alert("you have scrolled, now looking at "+pointer+" to "+(pointer+10));
+		}
 	
       window.onload= function(){
 	   let state= "MD";
@@ -92,9 +187,27 @@
        xhttp.onload = function() {
         document.getElementById("demo").innerHTML = this.responseText;
         }
-       xhttp.open("GET", "text.txt", true);
+       xhttp.open("GET", "data.txt", true);
        xhttp.send();
       }
+	  
+	  const povertStats= []
+	  for let n=0; n<= docLength; n++ {]
+		povertStats[n]= new Object(); 
+		povertStats[n].State= 'PUT STATE HERE';
+		povertStats[n].FIPPS= 000;
+		povertStats[n].ID= 0000; 
+		povertStats[n].Name='name';
+		povertStats[n].Population= 000;
+		povertStats[n].SchoolPopulation=000;
+		povertStats[n].inPoverty=000;
+		povertStats[n].rate=000;
+	  }
+	  
+	  function sortDoc(numRow, )
+	  {
+	    
+	  
     </script>
   
 </html>
