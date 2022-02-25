@@ -50,7 +50,7 @@
       </thead>
       <tbody>
           <tr>
-              <td id='state'>AL</td>
+              <td id='state'>state here</td>
               <td>01</td>
               <td>00190</td>
               <td>Alabaster City School District</td>
@@ -160,11 +160,10 @@
   
   
     
-</body>
 
-<body>
+
   <p id= "output"></p>
-</body> 
+ 
 
     <script>
 		let pointer=0;
@@ -188,7 +187,7 @@
        xhttp.onload = function() {
         document.getElementById("demo").innerHTML = this.responseText;
         }
-       xhttp.open("GET", "data.txt", true);
+       xhttp.open("GET", "Data.txt", true);
        xhttp.send();
       }
 	  
@@ -210,5 +209,5 @@
 	    }
 	  
     </script>
-  
+ </body>
 </html>
