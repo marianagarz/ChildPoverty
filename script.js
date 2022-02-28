@@ -18,22 +18,28 @@ function loadDoc() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         document.getElementById("demo").innerHTML = this.responseText;
+		toArray(this.responseText);
     }
     xhttp.open("GET", "Data.txt", true);
     xhttp.send();
 }
-  
-  /*const povertStats= []
-  for (let n=0; n<= docLength; n++) {
-	povertStats[n]= new Object(); 
-	povertStats[n].State= 'PUT STATE HERE';
-	povertStats[n].FIPPS= 000;
-	povertStats[n].ID= 0000; 
-	povertStats[n].Name='name';
-	povertStats[n].Population= 000;
-	povertStats[n].SchoolPopulation=000;
-	povertStats[n].inPoverty=000;
-	povertStats[n].rate=000;
-  }*/
+
+function toArray(text){
+	const fullTable=[]; 
+	
+	const rows= text.split("\n"); 
+	console.log(rows);
+	
+	for (i=0;i<=rows.length; i++){
+		const temp= rows[i].split(","); 
+		const obj= {"state": temp[0]};
+		fullTable.push(obj);
+	}
+	
+	document.getElementById("test").innerHTML = fullTable[0];
+
+}
+
+
   
   
