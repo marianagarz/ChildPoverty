@@ -1,4 +1,3 @@
-State Postal Code,State FIPS Code,District ID,Name,Estimated Total Population,Estimated Population 5-17,Estimated number of relevant children 5 to 17 years old in poverty who are related to the householder
 AL,1,190,Alabaster City School District,35268,6797,669
 AL,1,5,Albertville City School District,22120,4163,918
 AL,1,30,Alexander City City School District,16819,2579,700
