@@ -1,17 +1,18 @@
-//let pointer=0;
-   /*function myFunction() {
+
+let length=0;  
+let pointer=0;
+const fullTable=[];  
+
+function myFunction() {
 		window.alert("Fill in this code please!");
 	}
 	
-	function nextPage(){
-		pointer= pointer+10;
-		window.alert("you have scrolled, now looking at "+pointer+" to "+(pointer+10));
-	}
 
-  window.onload= function(){
-   let state= "MD";
-   document.getElementById("state").innerHTML=state;
- };*/
+function nextPage(){
+		
+		window.alert("you have scrolled,"+length+" now looking at "+pointer+" to "+(pointer+length));
+		pointer+=length;
+	}
 
  
 function loadDoc() {
@@ -25,7 +26,7 @@ function loadDoc() {
 }
 
 function toArray(text){
-	const fullTable=[]; 
+	
 	
 	const rows= text.split("\n"); 
 	
@@ -36,8 +37,20 @@ function toArray(text){
 		fullTable.push(obj);
 	}
 	
-	toTable(fullTable);
+	changeDisplay(10); 
 	
+	
+	
+}
+
+function changeDisplay(num)
+{
+	length= num;
+	const temp= [];
+	for (i=0;i<num;i++)
+		temp[i]=fullTable[i];
+	
+	toTable(temp);
 }
 
 function toTable(array)
@@ -51,7 +64,7 @@ function toTable(array)
 
 }
 
-
+loadDoc();
 
   
   
