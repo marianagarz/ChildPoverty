@@ -1,6 +1,6 @@
 
 let length=0;  
-let pointer=0;
+let mode=0; 
 const fullTable=[];  
 
 function myFunction() {
@@ -9,9 +9,19 @@ function myFunction() {
 	
 
 function nextPage(){
+		length=length+mode;
+		window.alert("you have scrolled,"+mode+" length is now "+length);
 		
-		window.alert("you have scrolled,"+length+" now looking at "+pointer+" to "+(pointer+length));
-		pointer+=length;
+		const temp= [];
+		let x=0;
+		for (i=(length-mode);i<length;i++)
+		{
+		  temp[x]=fullTable[i];
+		  x++;
+		}
+	
+	    toTable(temp);
+		
 	}
 
  
@@ -45,7 +55,8 @@ function toArray(text){
 
 function changeDisplay(num)
 {
-	length= num;
+	length=num; 
+	mode=num;
 	const temp= [];
 	for (i=0;i<num;i++)
 		temp[i]=fullTable[i];
