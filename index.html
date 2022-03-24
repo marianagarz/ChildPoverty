@@ -26,14 +26,18 @@
             <option value="state">State</option>
             <option value="fips">State FIPS Code</option>
             <option value="dist-id">District ID</option>
-            <!--Add remaining options-->
+			<option value="name">Name</option>
+			<option value="total-population">Total Population</option>
+			<option value="school-aged">School Aged Population</option>
+			<option value="school-aged-poverty">School Aged Population in Poverty</option>
+			<option value="poverty-rate">Poverty Rate</option>
         </select>
         <lable for="searchfor">Search for </lable>
         <input id="searchfor" type="text" />
         <select name="scope" id="search-scope">
-            <option value="exact">Matches Exactly</option>
-            <option value="contains">Contains</option>
-            <option value="not-conains">Does Not Contain</option>
+            <option value=1>Matches Exactly</option>
+            <option value=2>Contains</option>
+            <option value=3>Does Not Contain</option>
         </select>
     <input type="submit" id="submit-search" />
     </form>
