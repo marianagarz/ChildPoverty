@@ -4,8 +4,7 @@ let mode=0;
 const fullTable=[];  
 
 function myFunction() {
-	    let pick =document.getElementById("search-column").getValue;
-	    console.log("You picked");
+		window.alert("Fill in this code please!");
 	}
 	
 
@@ -76,12 +75,13 @@ function toTable(array)
 
 }
 
+
 function search()
 {
-	let column =document.getElementById("search-column").getValue;
-	let mode =document.getElementById("search-scope").getValue;
+	let column =document.getElementById("search-column").getValue();
+	let mode =document.getElementById("search-scope").getValue();
 	//iffy on this tbh (c below);
-	let ident =document.getElementById("searchfor").getValue;
+	let ident =document.getElementById("searchfor").getValue();
 	
 	toTable(fullTable.filter(getSearchCallBack(column,mode.ident))); 
 }
@@ -91,7 +91,7 @@ function search()
 	//not sorted by collumns, or can i use a dot opperator 
 	// and make the opperator a variable??? thats how i have it rn, 
 	//other alternative would be to make a loop in search.
-function getSearchCallBack (column, mode,ident){
+function getSearchCallBack(column, mode,ident){
 	const seachModes= [ (currentValue) => (currentValue.column)==ident, 
 						(currentValue) => (currentValue.column).includes(ident),
 						(currentValue) => !(currentValue.column).includes(ident)];
@@ -99,4 +99,4 @@ function getSearchCallBack (column, mode,ident){
 }
 
   
-  
+loadDoc();
