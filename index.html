@@ -20,7 +20,7 @@
 	<button type="button" onclick="changeDisplay(25)">see twenty-five</button>
 	<button type="button" onclick="changeDisplay(50)">see fifty</button>
 	
-    <form id="search" onSubmit="myFunction()">
+    <form id="search" onSubmit="search()">
         <lable for="search-column">In Column:</lable>
         <select name="column" id="search-column">
             <option value="state">State</option>
@@ -35,9 +35,9 @@
         <lable for="searchfor">Search for </lable>
         <input id="searchfor" type="text" />
         <select name="scope" id="search-scope">
-            <option value=1>Matches Exactly</option>
-            <option value=2>Contains</option>
-            <option value=3>Does Not Contain</option>
+            <option value="exact">Matches Exactly</option>
+            <option value="contains">Contains</option>
+            <option value="not-contains">Does Not Contain</option>
         </select>
     <input type="submit" id="submit-search" />
     </form>
