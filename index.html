@@ -36,15 +36,19 @@
         <select name="column" id="search-column">
             <option value="state">State</option>
             <option value="fips">State FIPS Code</option>
-            <option value="dist-id">District ID</option>
-            <!--Add remaining options-->
+            <option value="id">District ID</option>
+            <option value="name">Name</option>
+			<option value="totalPop">Total Population</option>
+			<option value="schoolAgedPop">School Aged Population</option>
+			<option value="schoolInPov">School Aged Population in Poverty</option>
+			<option value="povRate">Poverty Rate</option>
         </select>
         <lable for="searchfor">Search for </lable>
         <input id="searchfor" type="text" />
         <select name="scope" id="search-scope">
-            <option value=1>Matches Exactly</option>
-            <option value=2>Contains</option>
-            <option value=3>Does Not Contain</option>
+            <option value=0>Matches Exactly</option>
+            <option value=1>Contains</option>
+            <option value=2>Does Not Contain</option>
         </select>
 		<button type="button" onclick="search()">go!</button>
     <input type="submit" id="submit-search" />

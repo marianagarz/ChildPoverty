@@ -79,17 +79,18 @@ function toTable(array)
 
 function search()
 {
-	let column =document.getElementById("search-column").getValue();
-	let mode =document.getElementById("search-scope").getValue();
+	let column =document.getElementById("search-column").value;
+	let mode =document.getElementById("search-scope").value;
 	//iffy on this tbh (c below);
-	let ident =document.getElementById("searchfor").getValue();
+	let ident =document.getElementById("searchfor").value;
 	
-	toTable(fullTable.filter(getSearchCallBack(column,mode.ident))); 
+	toTable(fullTable.filter(getSearchCallBack(column,mode,ident))); 
 }
 
 	
 function getSearchCallBack(column, mode,ident){
-	const seachModes= [ (currentValue) => (currentValue[column])==ident, 
+	console.log(mode); 
+	const searchModes= [ (currentValue) => (currentValue[column])==ident, 
 						(currentValue) => (currentValue[column]).includes(ident),
 						(currentValue) => !(currentValue[column]).includes(ident)];
 	return searchModes[mode];
