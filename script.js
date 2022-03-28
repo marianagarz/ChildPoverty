@@ -2,9 +2,17 @@
 let length=0;  
 let mode=0; 
 const fullTable=[];  
+let searchvalue;
+let incolumn;
+let searchtype; 
 
-function myFunction() {
+
+
+function myFunction(value) {
 		window.alert("Fill in this code please!");
+
+
+		
 	}
 	
 
@@ -53,6 +61,175 @@ function toArray(text){
 	
 }
 
+
+function searchColumn()
+{
+	searchvalue= Document.getElementById("searchfor").value;
+	incolumn = Document.getElementById("search-column").value;
+	searchtype = Document.getElementById("search-Scope").value; 
+
+  let search;
+	if(incolumn == "state"){
+		search = fullTable.filter(searchstate())
+	}
+	else if( incolumn == "fips"){
+		search = fullTable.filter(searchfips())
+	}
+	else if( incolumn == "dist-id"){
+		search = fullTable.filter(searchid())
+	}
+	else if( incolumn == "name"){
+		search = fullTable.filter(searchname())
+	}
+	else if( incolumn == "totalpop"){
+		search = fullTable.filter(searchpop())
+	}
+	else if( incolumn == "sap"){
+		search = fullTable.filter(searchsap())
+	}
+	
+	else if( incolumn == "scap"){
+		search = fullTable.filter(searchsap())
+	}
+	else if( incolumn == "povertyrate"){
+		search = fullTable.filter(searchpverty())
+	}
+  toTable(search);
+}
+
+function searchstate(state){
+	
+if(searchtype == "exact" ){
+		return state.state == searchvalue;
+	}
+if(searchtype == "contains"){
+ 
+	return state.state.indexOf(searchvalue) >= 0; 
+	
+}	
+if(searchtype == "not-contains"){
+	return state.state.indexOf(searchvalue) == -1;
+}
+
+}
+
+function searchfips(fips){
+	
+	if(searchtype == "exact" ){
+			return fips.fips == searchvalue;
+		}
+	if(searchtype == "contains"){
+	 
+		return fips.fips.indexOf(searchvalue) >= 0; 
+		
+	}	
+	if(searchtype == "not-contains"){
+		return fips.fips.indexOf(searchvalue) == -1;
+	}
+	
+	}
+
+	function searchid(id){
+	
+		if(searchtype == "exact" ){
+				return id.id == searchvalue;
+			}
+		if(searchtype == "contains"){
+		 
+			return id.id.indexOf(searchvalue) >= 0; 
+			
+		}	
+		if(searchtype == "not-contains"){
+			return id.id.indexOf(searchvalue) == -1;
+		}
+		
+		}
+
+		function searchname(name){
+	
+			if(searchtype == "exact" ){
+					return name.name == searchvalue;
+				}
+			if(searchtype == "contains"){
+			 
+				return name.name.indexOf(searchvalue) >= 0; 
+				
+			}	
+			if(searchtype == "not-contains"){
+				return name.name.indexOf(searchvalue) == -1;
+			}
+			
+			}
+
+		function searchpop(totalpop){
+	
+				if(searchtype == "exact" ){
+						return totalpop.totalpop == searchvalue;
+					}
+				if(searchtype == "contains"){
+				 
+					return totalpop.totalpop.indexOf(searchvalue) >= 0; 
+					
+				}	
+				if(searchtype == "not-contains"){
+					return totalpop.totalpop.indexOf(searchvalue) == -1;
+				}
+				
+				}
+	
+		function searchsap(sap){
+	
+			if(searchtype == "exact" ){
+				return sap.sap == searchvalue;
+			}
+			if(searchtype == "contains"){
+					 
+				return sap.sap.indexOf(searchvalue) >= 0; 
+						
+			}	
+			if(searchtype == "not-contains"){
+				return sap.sap.indexOf(searchvalue) == -1;
+			}
+					
+		}
+
+		function searchscap(scap){
+	
+			if(searchtype == "exact" ){
+				return scap.scap == searchvalue;
+			}
+			if(searchtype == "contains"){
+					 
+				return scap.scap.indexOf(searchvalue) >= 0; 
+						
+			}	
+			if(searchtype == "not-contains"){
+				return scap.scap.indexOf(searchvalue) == -1;
+			}
+					
+		}
+
+		function searchpoverty(poverty){
+	
+			if(searchtype == "exact" ){
+				return poverty.poverty == searchvalue;
+			}
+			if(searchtype == "contains"){
+					 
+				return poverty.poverty.indexOf(searchvalue) >= 0; 
+						
+			}	
+			if(searchtype == "not-contains"){
+				return poverty.poverty.indexOf(searchvalue) == -1;
+			}
+					
+		}
+
+			
+		
+	
+
+
 function changeDisplay(num)
 {
 	length=num; 
@@ -63,6 +240,8 @@ function changeDisplay(num)
 	
 	toTable(temp);
 }
+
+
 
 function toTable(array)
 {

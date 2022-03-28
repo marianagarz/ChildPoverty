@@ -20,13 +20,18 @@
 	<button type="button" onclick="changeDisplay(25)">see twenty-five</button>
 	<button type="button" onclick="changeDisplay(50)">see fifty</button>
 	
-    <form id="search" onSubmit="myFunction()">
+    <form id="search" onSubmit="searchColumn()">
         <lable for="search-column">In Column:</lable>
         <select name="column" id="search-column">
             <option value="state">State</option>
             <option value="fips">State FIPS Code</option>
             <option value="dist-id">District ID</option>
-            <!--Add remaining options-->
+            <option value="name">Name</option>
+            <option value="totalpop">Total Population</option>
+            <option value="sap"> School age Populations</option>
+            <option value="scap">School age children in Poverty</option>
+            <option value="povertyrate">Poverty Rate</option>
+            <!--Add remaining options-->  
         </select>
         <lable for="searchfor">Search for </lable>
         <input id="searchfor" type="text" />
